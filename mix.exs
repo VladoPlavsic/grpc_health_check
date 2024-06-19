@@ -1,4 +1,4 @@
-defmodule GrpcHealthCheck.Mixfile do
+defmodule GrpcHealthCheck.MixProject do
   use Mix.Project
 
   def project do
@@ -13,15 +13,14 @@ defmodule GrpcHealthCheck.Mixfile do
 
   def application do
     [
-      mod: {GrpcHealthCheck, []},
       extra_applications: [:logger]
     ]
   end
 
   defp deps do
     [
-      {:protobuf, "~> 0.5.3"},
-      {:grpc, "~> 0.3.1"}
+      {:protobuf, "~> 0.11.0"},
+      {:grpc, "~> 0.8.0"}
     ]
   end
 end
